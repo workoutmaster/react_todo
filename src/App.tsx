@@ -17,10 +17,13 @@ const useStyles = makeStyles({
   },
 });
 
+
 const App: React.FC = (props: any) => {
   const [tasks, setTasks] = useState([{id:"", title:""}]);
   const [input, setInput] = useState("");
   const classes = useStyles();
+
+
 
   useEffect(() => {
     const unSub = auth.onAuthStateChanged((user) => {
